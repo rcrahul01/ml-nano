@@ -13180,8 +13180,8 @@ In the code block below, you will need to implement the following:</p>
 
 <span class="c1"># TODO: Initialize the three models</span>
 <span class="n">clf_A</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">clf_B</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">()</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">()</span>
+<span class="n">clf_B</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate the number of samples for 1%, 10%, and 100% of the training data</span>
 <span class="n">samples_1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">)</span>
@@ -14067,7 +14067,7 @@ When we receive a new donor, the new donor is parsed through all set of question
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span>
 
 <span class="c1"># TODO: Initialize the classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># TODO: Create the parameters list you wish to tune</span>
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n_estimators&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">],</span><span class="s1">&#39;max_depth&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">]}</span>
@@ -14276,8 +14276,9 @@ occupation
 education-num</p>
 <p>hours-per-week greatly influences income than all others as it might be directly proportional to income.
 capital-gain and capital-loss would be the 2nd most important features that influences income. 
-Finally occupation influences to a less extent than other in the list. Occupation can determine the income only upto certain extent, as people with different occupation has differrent incomes, a doctor might be earling more than a teacher.
-Similary income dependes also on the education-num as education-num determines the type of occupation that we can get into and thus the income.</p>
+capital gain or capital loss, can either add profit to your overall investment ot you may get less amount then invested incase of loss. so these factor might influence your overall income.</p>
+<p>Finally occupation influences to a less extent than other in the list. Occupation can determine the income only upto certain extent, as people with different occupation has differrent incomes, a doctor might be earling more than a teacher.</p>
+<p>Similary income dependes also on the education-num as education-num determines the type of occupation that we can get into and thus the income. But occupation may not necessaily be solely depends on education-num, as there are lot of other kind of work people do like some businees, stores, those people may not have higher education,</p>
 
 </div>
 </div>
@@ -14661,7 +14662,8 @@ njEASpIk9YwBUJIkqWcMgJIkST3zD6lLvwkcMvfxAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> It appears the visualization displays the five most relevant features for predicting if an individual makes at most or above $50,000 in which three seems to be same as discussed in Question 6.Except Marital_Status and age features all others seems to confirm the features mentioned in Question 6.</p>
-<p>Marital_Status and age are impotant factor too, like an unmarried person might have less expenses compared to married person, but after certain age people earn more, but again not necessary.</p>
+<p>Marital_Status and age are impotant factor too, after certain age people earn more as they are more experienced in their field or,not necessary though.
+Marital_Status might have some tax perks that are't availabel for single</p>
 
 </div>
 </div>
