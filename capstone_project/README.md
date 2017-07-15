@@ -1,17 +1,16 @@
-# MLND Capstone
+# Capstone project
 Capstone for Udacity's Machine Learning Nanodegree
 
 ## Finding pairs of duplicate questions
-This project is taken from the Kaggle platform, and is currently available under the name Quora
-Question Pairs in this link: https://www.kaggle.com/c/quora-question-pairs. Quora is a platform where
-anyone can make a question, and other users give answers. According to Quora, they receive over 100
-million visits every month, so it's very common that the question someone asks has already been
-answered by others. In order to make it easier for someone to find an answer, they use a Random Forest
-model to identify duplicate questions.
-This project is about finding a model that can determine whether a pair of questions has the same
-meaning or not. The input data is a data set of about 400,000 pair of questions with a human provided
-label stating if they have the same meaning. As for testing, Kaggle provides a set of unlabeled pairs,
-which are then compared to their own human labeled results.
+Over 100 million people visit Quora every month, so it's no surprise that many people ask similarly worded questions. Multiple questions with the same intent can cause seekers to spend more time finding the best answer to their question, and make writers feel they need to answer multiple versions of the same question. Quora values canonical questions because they provide a better experience to active seekers and writers, and offer more value to both groups in the long term. Ideally, these duplicate questions would be merged together into a single canonical question, as doing so would provide several benefits: 
+• It saves the question asker time if their question has already been answered previously on the site. 
+ • Frequently repeated questions can frustrate highly engaged users whose feeds become polluted with redundant questions. 
+• Q&A knowledge bases have more value to users and researchers when there is a single canonical question and collections of answers, 
+• Having knowledge of alternative phrasings of the same question can improve search and discovery. 
+
+A prevalent problem in online Q&A forums like Stack Overflow, Stack Exchange and Quora, for which combining the answers for duplicate questions asked by their users improves the efficiency and the quality of their service.
+Relevant work: https://web.stanford.edu/class/cs224n/reports/2748045.pdf
+I will perform numerous experiments using publicly available Quora’s Question Pairs dataset https://www.kaggle.com/c/quora-question-pairs/data,  which consists of 400000 pairs of questions labeled as duplicates or not duplicates.
 
 ## Datasets
 The necessary datasets for this project can be found in the webpage of the Kaggle's project, which is
